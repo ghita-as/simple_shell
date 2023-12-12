@@ -1,32 +1,39 @@
 #include <stdio.h>
 
 /**
- * multiple  - calculates the multiplication of two numbers
- * @num1 - the first int variable
- * @num2 - the second int variable
- * Return: the multiplication of num1 and num2
+ * mul - Calculates the multiplication of two numbers
+ *
+ * @n1: The first number to multiply
+ * @n2: The second number to multiply
+ *
+ * Return: The multiplication of n1 and n2
  */
 
-int multiple(int num1, int num2)
+int mul(int n1, int n2)
 {
-	return (num1 * num2);
+	return (n1 * n2);
 }
 
 /**
- * main - entry function
- * Return : 0 (success)
+ * main - Entry point
+ *
+ * Description: This function takes two numbers as input, calculates
+ * their multiplication, and prints the result.
+ *
+ * Return: 0 if success
  */
 
-int main()
+int main(void)
 {
 	int n1, n2, m;
 
-	printf("The first number is: ");
-	scanf("%d\n", &n1);
-	printf("The second number is: ");
-	scanf("%d\n", &n2);
-	m = mulriple(n1, n2);
+	printf("Enter the first number: ");
+	scanf("%d", &n1);
+	printf("Enter the second number: ");
+	scanf("%d", &n2);
+	m = mul(n1, n2);
 
-	printf("The multiplication of the numbers is : %d\n", &m);
+	printf("The multiplication of the numbers is: %d\n", m);
+
 	return (0);
 }
