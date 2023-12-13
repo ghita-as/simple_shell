@@ -7,13 +7,12 @@
  * Return: always 0 when success
  */
 
-int main(int a, char **argv)
+int main(int a, char **argv, char **env)
 {
 	char *ligne = NULL;
-	/*char **commande = NULL;*/
+	char **commande = NULL;
 	int s = 0;
 	(void)a;
-	(void) argv;
 
 	while (1)
 	{
@@ -24,10 +23,12 @@ int main(int a, char **argv)
 				write(STDOUT_FILENO, "\n", 1);
 			return (s);
 		}
+	
+		commande = separateur(ligne);
+		if (!commande)
+			continue;
 
-		free(ligne);
-		/*commande = separateur(ligne);
-		
-		s = _executer(commande, argv);*/
+		s = _executer(commande, argv, env);
+
 	}
 }
