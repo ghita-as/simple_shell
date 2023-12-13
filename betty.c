@@ -1,3 +1,4 @@
+#include "shell.h"
 #include <stdio.h>
 
 /**
@@ -8,32 +9,38 @@
  *
  * Return: The multiplication of n1 and n2
  */
-
 int mul(int n1, int n2)
 {
 	return (n1 * n2);
 }
 
 /**
- * main - Entry point
- *
- * Description: This function takes two numbers as input, calculates
+ * multiplication - Takes two numbers, calculates
  * their multiplication, and prints the result.
  *
- * Return: 0 if success
+ * @num1: The first number
+ * @num2: The second number
  */
-
-int main(void)
+void multiplication(int num1, int num2)
 {
-	int n1, n2, m;
+	int result = mul(num1, num2);
 
-	printf("Enter the first number: ");
+	printf("La multiplication des deux nombre est: %d\n", result);
+}
+/**
+ * betty_fct - Enter point
+ * Return: always 0 if success
+ */
+int betty_fct(void)
+{
+	int n1, n2;
+
+	printf("Entrer le premier nombre: ");
 	scanf("%d", &n1);
-	printf("Enter the second number: ");
+	printf("Entrer le deuxième nombre: ");
 	scanf("%d", &n2);
-	m = mul(n1, n2);
 
-	printf("The multiplication of the numbers is: %d\n", m);
+	multiplication(n1, n2);
 
 	return (0);
 }
