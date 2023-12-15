@@ -1,6 +1,6 @@
 #include "shell.h"
 
-void freestr(char **a)
+void free2Dstri(char **a)
 {
 	int i;
 
@@ -12,5 +12,5 @@ void freestr(char **a)
 		free(a[i]);
 		a[i] = NULL;
 	}
-	free(a[i]), a[i] = NULL;
+	free(a);
 }

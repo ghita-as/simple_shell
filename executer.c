@@ -12,14 +12,14 @@ int _executer(char **commande, char **argv)
 			
 		{
 			perror(argv[0]);
-			freestr(commande);
+			free2Dstri(commande);
 			exit(0);
 		}
 	}
 	else
 	{
 		waitpid(fils, &s, 0);
-		freestr(commande);
+		free2Dstri(commande);
 	}
 	return (WEXITSTATUS(s));
 }

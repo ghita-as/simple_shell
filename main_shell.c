@@ -25,7 +25,7 @@ int main(int a, char **argv)
 		}
 	
 		commande = separateur(ligne);
-		if (!commande)
+		if (commande == NULL)
 			continue;
 
 		s = _executer(commande, argv);

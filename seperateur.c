@@ -12,13 +12,16 @@ char **separateur(char *ligne)
 	if (!ligne)
 		return (NULL);
 	
-	tmp = _up(ligne);
+	tmp = _strdup(ligne);
+	
 	t = strtok(tmp, del);
 
 	if (t == NULL)
 	{
-		free(ligne), ligne = NULL;
-		free(tmp), tmp = NULL;
+		free(ligne);
+		ligne = NULL;
+		free(tmp);
+		tmp = NULL;
 		return (NULL);
 	}
 
@@ -27,24 +30,27 @@ char **separateur(char *ligne)
 		cmpt++;
 		t = strtok(NULL, del);
 	}
-	free(tmp), tmp = NULL;
+	free(tmp);
+	tmp = NULL;
 
 	co = malloc(sizeof(char *) * (cmpt + 1));
 	
 	if (!co)
 	{
-		free(ligne), ligne = NULL;
+		free(ligne);
+		ligne = NULL;
 		return (NULL);
 	}
 
 	t = strtok(ligne, del);
 	while (t)
         {
-		co[i] = _up(t);
+		co[i] = _strdup(t);
 		t = strtok(NULL, del);
 		i++;
 	}
-	free(ligne), ligne = NULL;
+	free(ligne);
+	ligne = NULL;
 	co[i] = NULL;
 	return (co);
 }

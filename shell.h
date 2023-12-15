@@ -17,12 +17,12 @@ int betty_fct(void);
 char *lire_ligne(void);
 char **separateur(char *ligne);
 int _executer(char **commande, char **argv);
-void freestr(char **a);
+void free2Dstri(char **a);
 
-char *_up(const char *s);
-int _cmp(char *s1, char *s2);
-int _lenght(char *s);
-char *_cat(char *d, char *so);
-char *_cp(char *d, char *so);
+char *_strdup(const char *s);
+int _strcmp(char *s1, char *s2);
+int _strlen(char *s);
+char *_strcat(char *d, char *so);
+char *_strcpy(char *d, char *so);
 
 #endif
