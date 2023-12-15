@@ -12,7 +12,7 @@ int _executer(char **commande, char **argv, char **env)
 		{
 			perror(argv[0]);
 			freestr(commande);
-			exit(150);
+			exit(0);
 		}
 	}
 	else
