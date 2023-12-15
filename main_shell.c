@@ -7,7 +7,7 @@
  * Return: always 0 when success
  */
 
-int main(int a, char **argv, char **env)
+int main(int a, char **argv)
 {
 	char *ligne = NULL;
 	char **commande = NULL;
@@ -28,7 +28,7 @@ int main(int a, char **argv, char **env)
 		if (!commande)
 			continue;
 
-		s = _executer(commande, argv, env);
+		s = _executer(commande, argv);
 
 	}
 }

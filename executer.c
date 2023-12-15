@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int _executer(char **commande, char **argv, char **env)
+int _executer(char **commande, char **argv)
 {
 	pid_t fils;
 	int s;
@@ -8,7 +8,8 @@ int _executer(char **commande, char **argv, char **env)
 	fils = fork();
 	if (fils == 0)
 	{
-		if (execve(commande[0], commande, env) == -1)
+		if (execve(commande[0], commande, environ) == -1)
+			
 		{
 			perror(argv[0]);
 			freestr(commande);

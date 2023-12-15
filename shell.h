@@ -11,12 +11,12 @@
 #include <errno.h>
 #include <fcntl.h>
 
-extern char **env;
+extern char **environ;
 
 int betty_fct(void);
 char *lire_ligne(void);
 char **separateur(char *ligne);
-int _executer(char **commande, char **argv, char **env);
+int _executer(char **commande, char **argv);
 void freestr(char **a);
 
 char *_up(const char *s);
