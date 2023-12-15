@@ -11,7 +11,7 @@ int main(int a, char **argv)
 {
 	char *ligne = NULL;
 	char **commande = NULL;
-	int s = 0;
+	int s = 0, id = 0;
 	(void)a;
 
 	while (1)
@@ -23,12 +23,13 @@ int main(int a, char **argv)
 				write(STDOUT_FILENO, "\n", 1);
 			return (s);
 		}
+		id++;
 	
 		commande = separateur(ligne);
 		if (commande == NULL)
 			continue;
 
-		s = _executer(commande, argv);
+		s = _executer(commande, argv, id);
 
 	}
 }
