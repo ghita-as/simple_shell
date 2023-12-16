@@ -29,7 +29,10 @@ int main(int a, char **argv)
 		if (commande == NULL)
 			continue;
 
-		s = _executer(commande, argv, id);
+		if (integre(commande[0]))
+			gestion_integre(commande, argv, &s, id);
+		else
+			s = _executer(commande, argv, id);
 
 	}
 }
