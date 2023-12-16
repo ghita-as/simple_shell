@@ -59,7 +59,7 @@ char *_strcat(char *d, char *so)
 		p++;
 		so++;
 	}
-	*p = *so;
+	*p = '\0';
 	return (d);
 }
 
@@ -71,8 +71,7 @@ char *_strcpy(char *d, char *so)
 	{
 		d[i] = so[i];
 		i++;
-		so++;
 	}
-	*d = *so;
+	d[i] = '\0';
 	return (d);
 }

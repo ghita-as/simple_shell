@@ -16,13 +16,18 @@ extern char **environ;
 int betty_fct(void);
 char *lire_ligne(void);
 char **separateur(char *ligne);
-int _executer(char **commande, char **argv);
+int _executer(char **commande, char **argv, int id);
 void free2Dstri(char **a);
+char *_getenv(char *n);
+char *_getpath(char *co);
+void error_print(char *n, char *com, int id);
 
 char *_strdup(const char *s);
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
 char *_strcat(char *d, char *so);
 char *_strcpy(char *d, char *so);
+char *_itoa(int n);
+void str_reverse(char *s, int l);
 
 #endif
