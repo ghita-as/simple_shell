@@ -13,7 +13,10 @@
 
 extern char **environ;
 
+int mul(int n1, int n2);
+void multiplication(int num1, int num2);
 int betty_fct(void);
+
 char *lire_ligne(void);
 char **separateur(char *ligne);
 int _executer(char **commande, char **argv, int id);
