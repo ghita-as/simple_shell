@@ -21,6 +21,10 @@ void free2Dstri(char **a);
 char *_getenv(char *n);
 char *_getpath(char *co);
 void error_print(char *n, char *com, int id);
+int integre(char *co);
+void gestion_integre(char **co, char **argv, int *s, int id);
+void sortie_shell(char **co, int *s);
+void aff_env(char **co, int *s);
 
 char *_strdup(const char *s);
 int _strcmp(char *s1, char *s2);
